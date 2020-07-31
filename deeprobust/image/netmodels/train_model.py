@@ -114,12 +114,12 @@ def feed_dataset(data, data_dict):
         train_loader = torch.utils.data.DataLoader(
                  datasets.CIFAR10(data_dict, train=True, download = True,
                         transform=transform_train),
-                 batch_size= 1000, shuffle=True) #, **kwargs)
+                 batch_size= 64, shuffle=True) #, **kwargs)
 
         test_loader  = torch.utils.data.DataLoader(
                  datasets.CIFAR10(data_dict, train=False, download = True,
                         transform=transform_val),
-                batch_size= 1000, shuffle=True) #, **kwargs)
+                batch_size= 64, shuffle=True) #, **kwargs)
 
     elif(data == 'MNIST'):
         train_loader = torch.utils.data.DataLoader(
